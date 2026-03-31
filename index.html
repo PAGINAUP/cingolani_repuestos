@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cingolani Repuestos | Vera, Santa Fe</title>
+    <meta name="description" content="Cingolani Repuestos en Vera, Santa Fe. Autopartes, repuestos para autos, maquinaria agrícola. El repuesto exacto que necesitas.">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header & Nav -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <h1>Cingolani <span>Repuestos</span></h1>
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="#buscar">Buscar Repuesto</a></li>
+                    <li><a href="#marcas">Marcas</a></li>
+                    <li><a href="#pedido">Pedido Especial</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">Más Info <i class="fas fa-caret-down"></i></a>
+                        <div class="dropdown-content">
+                            <a href="#atencion">Atención al cliente</a>
+                            <a href="#nosotros">Quiénes somos</a>
+                            <a href="#novedades">Novedades</a>
+                            <a href="#contacto">Medios de pago</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h2>El repuesto exacto que necesitas, al instante.</h2>
+            <p>Especialistas en repuestos del automotor y maquinaria agrícola en Vera, Santa Fe.</p>
+            <div class="hero-buttons">
+                <a href="#buscar" class="btn btn-primary">Catálogo Online</a>
+                <a href="#contacto" class="btn btn-secondary"><i class="fab fa-whatsapp"></i> Consultar por WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Buscador de Repuestos -->
+    <section id="buscar" class="search-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>¿Qué repuesto buscás?</h2>
+                <p>Ingresá la marca, modelo o número de pieza para consultar stock.</p>
+            </div>
+            <div class="search-container">
+                <form id="search-form" class="search-form">
+                    <select class="search-select">
+                        <option value="">Categoría...</option>
+                        <option value="auto">Automóviles</option>
+                        <option value="pickup">Pick-Ups</option>
+                        <option value="agricola">Agro</option>
+                        <option value="motos">Motos</option>
+                    </select>
+                    <input type="text" placeholder="Ej: Filtro de aceite VW Amarok..." class="search-input">
+                    <button type="submit" class="btn btn-primary search-btn"><i class="fas fa-search"></i> Buscar</button>
+                </form>
+                <div id="search-results" class="search-results hidden">
+                    <!-- Results will be injected here via JS -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marcas -->
+    <section id="marcas" class="brands-section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Marcas que trabajamos</h2>
+                <p>Calidad garantizada con repuestos originales y alternativos de primera línea.</p>
+            </div>
+            <div class="brands-grid">
+                <div class="brand-item">BOSCH</div>
+                <div class="brand-item">SKF</div>
+                <div class="brand-item">FRAM</div>
+                <div class="brand-item">LUK</div>
+                <div class="brand-item">CORVEN</div>
+                <div class="brand-item">NGK</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Medios de Pago & Promos -->
+    <section class="promos-section">
+        <div class="container">
+            <div class="promo-banner">
+                <div class="promo-text">
+                    <h3>Aprovechá nuestras facilidades de pago</h3>
+                    <p>Pagá con Billetera Santa Fe, tarjetas de crédito y débito. ¡Consultá por descuentos en efectivo!</p>
+                </div>
+                <div class="promo-icons">
+                    <i class="fas fa-wallet" title="Billetera Santa Fe"></i>
+                    <i class="fas fa-credit-card" title="Tarjetas"></i>
+                    <i class="fas fa-money-bill-wave" title="Efectivo"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulario de Pedido Especial -->
+    <section id="pedido" class="special-order-section bg-light">
+        <div class="container">
+            <div class="order-container">
+                <div class="order-info">
+                    <h2>¿No lo tenemos? Te lo conseguimos.</h2>
+                    <p>Completá el formulario con los datos de tu vehículo o repuesto y nos encargamos de pedirlo. Te avisamos ni bien llegue.</p>
+                    <ul class="order-features">
+                        <li><i class="fas fa-check-circle"></i> Envíos rápidos</li>
+                        <li><i class="fas fa-check-circle"></i> Asesoramiento especializado</li>
+                        <li><i class="fas fa-check-circle"></i> Cotización sin cargo</li>
+                    </ul>
+                </div>
+                <div class="order-form-container">
+                    <form id="order-form" class="order-form">
+                        <div class="form-group">
+                            <label for="name">Nombre</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Teléfono / WhatsApp</label>
+                            <input type="tel" id="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="details">Detalle del Repuesto (Vehículo, Modelo, Año, N° de Pieza)</label>
+                            <textarea id="details" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block">Solicitar Presupuesto</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reseñas -->
+    <section class="reviews-section">
+        <div class="container">
+            <div class="reviews-header">
+                <div class="rating">
+                    <h2>4.6</h2>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+                <p>Calificación excelente en la zona según nuestros clientes.</p>
+            </div>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-author">Juan P.</div>
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"Excelente atención y siempre consiguen lo que necesito para el tractor."</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-author">María L.</div>
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                    <p>"Muy buenos precios y te asesoran muy bien. Lo recomiendo!"</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-author">Carlos G.</div>
+                    <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i></div>
+                    <p>"Tienen de todo. Fui a buscar un repuesto de un auto viejo y lo tenían en stock."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mapa y Contacto -->
+    <section id="contacto" class="contact-section bg-dark text-white">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-details">
+                    <h2>Dónde Encontrarnos</h2>
+                    <ul class="contact-list">
+                        <li><i class="fas fa-map-marker-alt"></i> <span>Lisandro de la Torre 2302-2400, S3550 Vera, Santa Fe.</span></li>
+                        <li><i class="fas fa-phone"></i> <span>+54 3483 41-6728</span></li>
+                        <li><i class="fas fa-clock"></i> <span>Lunes a Viernes de 8:00 a 20:00 hs (Corrido)</span></li>
+                        <li><i class="fas fa-calendar-times"></i> <span>Sábados y Domingos Cerrado</span></li>
+                    </ul>
+                    <div class="weekend-notice">
+                        <p><i class="fas fa-info-circle"></i> ¿Fin de semana? Dejanos tu consulta por WhatsApp o a través de nuestro asistente y te responderemos a primera hora el lunes con tu presupuesto listo.</p>
+                    </div>
+                </div>
+                <div class="contact-map">
+                    <!-- Google Maps Iframe -->
+                    <div class="map-container">
+                        <iframe src="https://maps.google.com/maps?q=Cingolani+Repuestos,+Lisandro+de+la+Torre+2302,+Vera,+Santa+Fe&t=&z=16&ie=UTF8&iwloc=&output=embed" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2023 Cingolani Repuestos. Vera, Santa Fe. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/5493483416728?text=Hola,%20quisiera%20consultar%20por%20un%20repuesto..." class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Chatbot Virtual Assistant (UI only) -->
+    <div class="chatbot-container" id="chatbot">
+        <div class="chatbot-header">
+            <div class="chatbot-title"><i class="fas fa-robot"></i> Asistente Virtual</div>
+            <div class="chatbot-close" id="chatbot-close"><i class="fas fa-times"></i></div>
+        </div>
+        <div class="chatbot-body" id="chatbot-body">
+            <div class="chat-message bot">Hola! Estamos fuera de nuestro horario de atención presencial, pero podés dejarme tu consulta y N° o Foto de repuesto/chasis. El lunes a primera hora te pasamos el presupuesto. ¿Qué necesitás hoy?</div>
+        </div>
+        <div class="chatbot-input">
+            <input type="text" id="chat-input" placeholder="Escribí tu mensaje...">
+            <button id="chat-send"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+    <div class="chatbot-toggle" id="chatbot-toggle">
+        <i class="fas fa-comment-dots"></i>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
